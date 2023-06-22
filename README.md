@@ -8,6 +8,12 @@ Runs your command every 1 min until it gets succeeded (exit 0) and then pops up 
 $ apt-get install libnotify-dev
 ```
 
+## Install
+
+```console
+$ sudo make install
+```
+
 ## notify-me
 
 ```console

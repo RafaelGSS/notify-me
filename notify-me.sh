@@ -3,10 +3,13 @@
 COMMAND="$1"
 MESSAGE="$2"
 
+# 15 minutes
+EXPIRE_TIME=900000
+
 while true; do
-  RESULT=$(eval "$COMMAND" 2>/dev/null; echo $?)
+  RESULT=$(eval "$COMMAND"; echo $?)
   if [[ -z "$RESULT" || "$RESULT" == "0" ]]; then
-    notify-send "$MESSAGE"
+    notify-send -t $EXPIRE_TIME "$MESSAGE"
     break
   fi
   sleep 60
