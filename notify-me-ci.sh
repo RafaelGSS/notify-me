@@ -1,5 +1,10 @@
 #!/bin/bash
 CI="$1"
+MSG="$2"
 
-command="notify-me './end-ci.sh \"$CI\"' \"Finished CI\""
+if [ -z "$2" ]; then
+  MSG="Finished CI"
+fi
+
+command="notify-me './end-ci.sh \"$CI\"' \"$MSG\""
 eval "$command"

@@ -36,6 +36,10 @@ This one is specific to Node.js contributors. It notifies whenever a CI is concl
 $ notify-me-ci $CIURL
 ```
 
+```console
+$ notify-me-ci $CIURL "My CI finally Finished"
+```
+
 Example:
 
 ```console
